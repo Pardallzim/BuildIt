@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Construtop</title>
+{% endblock %}
+{% block content %}
+
+{% include "partials/_alertas.html"%}
+<div class="text-center"><a href="{% url 'criar_item' %}" class="btn btn-primary">Criar itens</a></div>
+<div class="container text-center">
+  <div class="row g-0">
+    {% include 'partials/_cards.html' %}
+  </div>
+</div>
+    <!--Nav-->
+    <!-- <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+      <div class="bg-dark p-4">
+          <h1 class="text-center text-light">Suculencias Burguer's</h1>
+          <a class="textdecoration" href="#promocao">Promoções</a><br>
+          <a class="textdecoration" href="#cardapio">Cardapio</a><br>
+          <a class="textdecoration" href="#bebidas">Bebidas</a><br>
+          <a class="textdecoration" href="#sobre">Sobre nos</a><br>
+          <a class="textdecoration" href="#faleconosco">Fale Conosco</a><br>
+      </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+  </nav> -->
+  <!--Carrossel-->
+  <!-- <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/pexels-meraj-kazi-11299741.jpg' %}" class="d-block w-100 carrossel" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/pexels-meraj-kazi-11299742.jpg' %}" class="d-block w-100 carrossel" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/pexels-valeria-boltneva-1639557.jpg' %}" class="d-block w-100 carrossel" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+  <!--Promoções-->
+  <!-- <div class="text-center text-bg-dark" id="promocao" style="padding-top: 40px; padding-bottom: 40px; font-size: 30px;"><strong>Promoções</strong>
+  </div>
+  <div class="container text-center">
+      <div class="row g-0">
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/pexels-victor-cayke-17409458.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Coxinha</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/enroladinho.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Enroladinho</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/risole.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Risole</h5>
+                  <p class="card-text">R$4,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/hamburguer01.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Hamburguer</h5>
+                  <p class="card-text">R$7,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div> -->
+  <!--Cardapio-->
+  <!-- <div class="text-center text-bg-dark" id="cardapio" style="padding-top: 40px; padding-bottom: 40px; font-size: 30px;"><strong>Cardapio</strong>
+  </div>
+  <div class="container text-center">
+      <div class="row g-0">
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/pexels-victor-cayke-17409458.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Coxinha</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/enroladinho.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Enroladinho</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/risole.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Risole</h5>
+                  <p class="card-text">R$4,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/hamburguer01.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Hamburguer</h5>
+                  <p class="card-text">R$7,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+    <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/esfirra.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Esfirra</h5>
+                  <p class="card-text">R$6,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/quibe.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Quibe</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/espetinho.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Espetinho</h5>
+                  <p class="card-text">R$3,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/bolinho.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Bolo</h5>
+                  <p class="card-text">R$7,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+  <!--Bebidas-->
+  <!-- <div class="text-center text-bg-dark" id="bebidas" style="padding-top: 40px; padding-bottom: 40px; font-size: 30px;"><strong>Bebidas</strong>
+  </div>
+  <div class="container text-center">
+      <div class="row g-0">
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/agua.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Agua</h5>
+                  <p class="card-text">R$1,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/refrigerantes.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Refrigerantes 600ml</h5>
+                  <p class="card-text">R$5,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div><div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/Refrigerantes2l.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Refrigerantes 2L</h5>
+                  <p class="card-text">R$11,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div><div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+              <div class="card" style="width: 18rem; margin: auto">
+                  <img src="{% static 'assets/img/cerveja.jpg' %}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title">Cerveja 330ml</h5>
+                  <p class="card-text">R$7,99</p>
+                  <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+  <!--Conheça a Gente-->
+  <!-- <div class="text-center text-bg-dark" id="sobre" style="padding-top: 40px; padding-bottom: 40px; font-size: 30px;"><strong>Sobre nos</strong>
+  </div>
+  <div class="text-center">
+      <div class="row g-0" style="align-items: center; margin: 40px;">
+          <div class="col-xxl-4 col-md-4 col-sm-12" style="margin-bottom: 40px;">
+              <img src="{% static 'assets/img/pexels-fauxels-3183197.jpg' %}" alt="" height="100%" width="100%">
+          </div>
+          <div class="col-xxl-8 col-md-8 col-sm-12" style="margin-bottom: 40px;">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, reiciendis suscipit porro, harum asperiores eaque voluptates laudantium sapiente id nihil debitis! Voluptatibus id pariatur laudantium. Quo doloremque repudiandae facere consequuntur.</p>
+          </div>
+          <div class="col-xxl-8 col-md-8 col-sm-12" style="margin-bottom: 40px;">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum corrupti animi ea. Adipisci mollitia maxime, aspernatur, illum cupiditate hic reprehenderit quaerat accusamus iusto laborum soluta consectetur beatae dignissimos excepturi.</p>
+          </div>
+          <div class="col-xxl-4 col-md-4 col-sm-12" style="margin-bottom: 40px;">
+              <img src="{% static 'assets/img/pexels-tim-douglas-6205577.jpg' %}" alt="" height="100%" width="100%">
+          </div>
+      </div>
+  </div> -->
+  <!--Fale Conosco-->
+  <!-- <div class="text-center text-bg-dark" id="faleconosco" style="padding-top: 40px; padding-bottom: 40px; font-size: 30px;"><strong>Fale Conosco</strong>
+  </div>
+  <div style="margin-bottom: 100px; margin-top: 100px;">
+      <div class="container marginpromo mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control marginpromo" id="exampleFormControlInput1">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+          <textarea class="form-control marginpromo" id="exampleFormControlTextarea1" rows="5"></textarea>   
+          <div class="text-center marginpromo">
+              <input class="text-bg-dark text-center" type="submit" value="Enviar" height="30px" width="70px" style="font-size: 20px;">
+          </div>
+      </div>
+  </div> -->
+  <!--Footer Início-->  
+  {% include 'partials/_footer.html' %}
+    
+  <!--Footer Fim-->  
+{% endblock %}

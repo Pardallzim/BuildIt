@@ -1,0 +1,16 @@
+{% load static %}
+{% for item in itens %}
+<div class="col-xxl-3 col-md-4 col-sm-12 marginpromo">
+    <div class="card" style="width: 18rem; margin: auto">
+        <img src="{{ item.path.url }}" class="card-img-top" alt="{{ item.name }}">
+        <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">Preço: R${{ item.price }}</p>
+        <a href="{% url 'comprar_item' item.id %}" class="btn btn-primary">Visualizar</a>
+        </div>
+        <div>
+            <p>Quantidade: {{item.storage}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}

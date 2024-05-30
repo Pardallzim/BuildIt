@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+        {% block title %}
+        {% endblock %}
+        <style>
+        .textdecoration{
+            text-decoration: none;
+            color: #f1f1f1;
+            font-size: 20px;
+            padding: 15px;
+            padding-bottom: 30px;
+        }
+        .marginpromo{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .carrossel{
+            height: 75vh ;
+        }
+        .card img{
+            height: 40vh;
+        }
+        </style>
+    </head>
+    <body>
+
+    {% block content %} 
+    {% endblock %}
+
+	</body>
+</html>
